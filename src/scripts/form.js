@@ -1,13 +1,5 @@
 'use strict';
 
-// - fill out form
-// - on submit prevent submission and capture data
-// get template element
-// fillout with correct data
-// generate preview
-// generate codeview
-// create copy button
-
 class Form {
     constructor() {
         this.classes = {
@@ -33,12 +25,10 @@ class Form {
     submit(event) {
         event.preventDefault();
         
-        const formData = new FormData(this.form);      
+        const formData = new FormData(this.form); 
         for (const pair of formData.entries()) {
             this.data[pair[0]] = pair[1];
         }
-
-        console.log(this.data);
     }
 }
 
