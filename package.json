@@ -1,0 +1,27 @@
+{
+  "name": "ciggy",
+  "version": "1.0.0",
+  "description": "Email signiture tool for Buildit employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/patrickbower/ciggy.git"
+  },
+  "author": "Patrick Bower",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickbower/ciggy/issues"
+  },
+  "homepage": "https://github.com/patrickbower/ciggy#readme",
+  "dependencies": {
+    "jshint": "^2.9.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}

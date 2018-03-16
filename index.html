@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buildit email signitures</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Signiture tool</h1>
+        <p class="lead">Create your email signitures</p>
+        <div class="row mt-5">
+            <div class="col">
+                <form action="#" class="js-details-form">
+                    <legend class="lead">1. Fill out your details</legend>
+                    <div class="form-group">
+                        <label for="name" class="font-weight-bold">Name</label>
+                        <input name="name" id="name" type="text" class="form-control" placeholder="I.e. Joanna Blogs">
+                    </div>
+                    <div class="form-group">
+                        <label for="role" class="font-weight-bold">Role</label>
+                        <input name="role" id="role" type="text" class="form-control" placeholder="I.e. Creative technologist">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="font-weight-bold">Email</label>
+                        <input name="email" id="email" type="text" class="form-control" placeholder="I.e. joanna.blogs@wipro.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile" class="font-weight-bold">Phone number</label>
+                        <input name="mobile" id="mobile" type="text" class="form-control" placeholder="I.e. +044 07976 057 697">
+                    </div>
+                    <div class="form-group">
+                        <label for="website" class="font-weight-bold">Website address</label>
+                        <input name="website" id="website" type="text" class="form-control" value="www.buildit.wiprodigital.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="office" class="font-weight-bold">Office address</label>
+                        <input name="office" id="office" type="text" class="form-control" value="2 Finsbury Avenue, London, EC2M 2PA, UK">
+                    </div>
+                    
+                    <div class="form-group text-right mt-4">
+                        <button type="submit" class="btn btn-primary">Create signiture</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                
+            </div>   
+        </div>
+    </div>
+    <template class="js-email-template">
+        <table style="font-family: Avenir, sans-serif, serif;">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="{{website}}" style="text-decoration:none!important; border:none!important;" target="_blank">
+                            <img alt="buildit logo" src="https://wiprodigital.com/wp-content/uploads/2015/09/WD_logo_150X27.png" width="150px" height="27px">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:15px;">
+                        <p style="color:#000000; margin: 0; font-size:15px!important; font-weight:bold; line-height: 1.2;">
+                            {{name}}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom:15px">
+                        <p style="color:#000000; margin: 0; font-size:15px!important; font-weight:bold; line-height: 1.2;">
+                            {{role}}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="mailto:{{email}}" style="text-decoration:none!important" target="_blank">
+                            <span style="color:#000000;!important; font-size:15px!important; line-height: 1.2;">
+                                {{email}}
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="tel:{{mobile}}" style="text-decoration:none!important" target="_blank">
+                            <span style="color:#000000;!important; font-size:15px!important; line-height: 1.2;">
+                                {{mobile}}
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:10px;">
+                        <a href="{{website}}" style="text-decoration:none!important" target="_blank">
+                            <span style="color:#000000;!important; font-size:15px!important; line-height: 1.2;">
+                                {{website}}
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://maps.google.com/?q={{office}}" style="text-decoration:none!important" target="_blank">
+                            <span style="color:#000000;!important; font-size:15px!important; line-height: 1.2;">
+                                {{office}}
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+    <script src="scripts.js" charset="utf-8" defur></script>
+</body>
+</html>
