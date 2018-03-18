@@ -1,5 +1,7 @@
 {
     "esversion": 6, 
     "strict": false,
-    "globalstrict": false
+    "globalstrict": false,
+    "browser" : true,
+    "devel": true // allow the use of console.log
 }

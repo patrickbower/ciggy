@@ -1,4 +1,4 @@
-'use strict';
+import Template from './template';
 
 class Form {
     constructor() {
@@ -29,6 +29,10 @@ class Form {
         for (const pair of formData.entries()) {
             this.data[pair[0]] = pair[1];
         }
+
+        // Template out email
+        const template = new Template(this.data);
+        template.init();
     }
 }
 

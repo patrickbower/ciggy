@@ -17,36 +17,37 @@
                     <legend class="lead">1. Fill out your details</legend>
                     <div class="form-group">
                         <label for="name" class="font-weight-bold">Name</label>
-                        <input name="name" id="name" type="text" class="form-control" placeholder="I.e. Joanna Blogs">
+                        <input name="name" id="name" type="text" class="form-control" placeholder="I.e. Joanna Blogs" value="Joanna Blogs" required>
                     </div>
                     <div class="form-group">
                         <label for="role" class="font-weight-bold">Role</label>
-                        <input name="role" id="role" type="text" class="form-control" placeholder="I.e. Creative technologist">
+                        <input name="role" id="role" type="text" class="form-control" placeholder="I.e. Creative technologist" value="Creative technologist" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="font-weight-bold">Email</label>
-                        <input name="email" id="email" type="text" class="form-control" placeholder="I.e. joanna.blogs@wipro.com">
+                        <input name="email" id="email" type="text" class="form-control" placeholder="I.e. joanna.blogs@wipro.com" value="joanna.blogs@wipro.com" required>
                     </div>
                     <div class="form-group">
                         <label for="mobile" class="font-weight-bold">Phone number</label>
-                        <input name="mobile" id="mobile" type="text" class="form-control" placeholder="I.e. +044 07976 057 697">
+                        <input name="mobile" id="mobile" type="text" class="form-control" placeholder="I.e. +044 07976 057 697" value="+044 07976 057 697" required>
                     </div>
                     <div class="form-group">
                         <label for="website" class="font-weight-bold">Website address</label>
-                        <input name="website" id="website" type="text" class="form-control" value="www.buildit.wiprodigital.com">
+                        <input name="website" id="website" type="text" class="form-control" value="www.buildit.wiprodigital.com" required>
                     </div>
                     <div class="form-group">
                         <label for="office" class="font-weight-bold">Office address</label>
-                        <input name="office" id="office" type="text" class="form-control" value="2 Finsbury Avenue, London, EC2M 2PA, UK">
+                        <input name="office" id="office" type="text" class="form-control" value="2 Finsbury Avenue, London, EC2M 2PA, UK" required>
                     </div>
-                    
-                    <div class="form-group text-right mt-4">
-                        <button type="submit" class="btn btn-primary">Create signiture</button>
+                    <div class="form-group text-right mt-5">
+                        <button type="submit" class="btn btn-primary btn-block">Create signiture</button>
                     </div>
                 </form>
             </div>
             <div class="col">
-                
+                <p class="lead">2. Copy email using button</p>
+                <div class="js-email-build"></div>
+                <button class="btn button-primary js-emailcopybtn">Copy</button>
             </div>   
         </div>
     </div>
