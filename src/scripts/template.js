@@ -1,55 +1,43 @@
 class Template {
-    constructor(data) {
-        this.classes = {
-            template: '.js-email-template'
-        };
-        this.data = data;
+  constructor(data) {
+    this.classes = {
+      template: '.js-email-template',
+      preview: '.js-email-build-preview',
+      copyTextArea: '.js-email-build-code',
+      copyBtn: '.js-email-build-copy'
+    };
+    
+    this.data = data;
+  }
+
+  init() {
+    this.getElements();
+    this.generate();
+    this.copy();
+  }
+
+  getElements() {
+    this.template = document.querySelector(this.classes.template).innerHTML;
+  }
+
+  generate() {
+    let { data, template } = this;
+
+    for (let key in data) {
+      var regEx = new RegExp('\\{{' + key + '\\}}', 'g');
+      template = template.replace(regEx, data[key]);
     }
 
-    init() {
-        this.getElements();
-        this.generate();
-        this.copy();
-    }
+    document.querySelector(this.classes.preview).innerHTML = template;
+    document.querySelector(this.classes.copyTextArea).innerHTML = template;
+  }
 
-    getElements() {
-        this.template = document.querySelector(this.classes.template).innerHTML;
-    }
-
-    generate() {
-        let { data, template } = this;
-        
-        for (let key in data) {
-            var regEx = new RegExp('\\{{' + key + '\\}}', 'g');
-            template = template.replace(regEx, data[key]);
-        }
-        
-        document.querySelector('.js-email-build').innerHTML = template;
-    }
-
-    copy() {
-        var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
-        copyEmailBtn.addEventListener('click', function(event) {
-            // Select the email link anchor text  
-            var emailLink = document.querySelector('.js-email-template');  
-            var range = document.createRange();  
-            range.selectNode(emailLink);
-            window.getSelection().addRange(range);  
-
-            try {  
-                // Now that we've selected the anchor text, execute the copy command  
-                var successful = document.execCommand('copy');  
-                var msg = successful ? 'successful' : 'unsuccessful';  
-                console.log('Copy email command was ' + msg);  
-            } catch(err) {  
-                console.log('Oops, unable to copy');  
-            }  
-
-            // Remove the selections - NOTE: Should use
-            // removeRange(range) when it is supported  
-            window.getSelection().removeAllRanges();  
-        });
-    }
+  copy() {
+    document.querySelector(this.classes.copyBtn).onclick = () => {
+      document.querySelector(this.classes.copyTextArea).select();
+      document.execCommand('copy');
+    };
+  }
 }
 
 export default Template;

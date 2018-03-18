@@ -5,3 +5,16 @@
 body {
   background-color: var(--main-bg-color);
 }
+
+.email-build-code {
+  height:0px;
+  width:0px;
+  position: relative;
+  top: -20px;
+  z-index: -1;
+}
+
+.email-build-copy {
+  margin-top: 40px;
+}
+

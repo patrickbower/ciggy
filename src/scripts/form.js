@@ -30,7 +30,6 @@ class Form {
             this.data[pair[0]] = pair[1];
         }
 
-        // Template out email
         const template = new Template(this.data);
         template.init();
     }
