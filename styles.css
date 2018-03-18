@@ -18,3 +18,11 @@ body {
   margin-top: 40px;
 }
 
+.circle {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  padding-left: 9px;
+  border-radius: 50%;
+  margin-right: 5px;
+}

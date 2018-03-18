@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-1">
         <h1>Signature tool</h1>
-        <p class="lead">Create your email signatures</p>
+        <p class="lead ">Create your email signatures</p>
+        <hr>
         <div class="row mt-5">
             <div class="col">
                 <form action="#" class="js-details-form">
-                    <legend class="lead">1. Fill out your details</legend>
+                    <legend class="lead font-weight-bold"><span class="circle text-light bg-primary">1</span> Fill out your details</legend>
                     <div class="form-group">
                         <label for="name" class="font-weight-bold">Name</label>
                         <input name="name" id="name" type="text" class="form-control" placeholder="I.e. Joanna Blogs" value="Joanna Blogs" required>
@@ -39,13 +40,13 @@
                         <label for="office" class="font-weight-bold">Office address</label>
                         <input name="office" id="office" type="text" class="form-control" value="2 Finsbury Avenue, London, EC2M 2PA, UK" required>
                     </div>
-                    <div class="form-group text-right mt-5">
+                    <div class="form-group text-right mt-4">
                         <button type="submit" class="btn btn-primary btn-block">Create signiture</button>
                     </div>
                 </form>
             </div>
             <div class="col">
-                <p class="lead">2. Copy generated signature</p>
+                <p class="lead font-weight-bold"><span class="circle text-light bg-primary">2</span> Preview and copy your signature</p>
                 <div class="js-email-build-preview"></div>
                 <button class="btn btn-primary btn-block email-build-copy js-email-build-copy">Copy</button>
                 <textarea class="email-build-code js-email-build-code"></textarea>
